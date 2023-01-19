@@ -18,6 +18,14 @@ optionsIconMap.set('Scissors', 'fa-regular fa-hand-scissors');
 setComponentsSize();
 setValueToPlayer();
 window.addEventListener('resize', setComponentsSize);
+CPUOptionContainer.addEventListener('mouseenter', (e)=>
+{
+    CPUOptionContainer.style.backgroundColor = '#7590b3';
+});
+CPUOptionContainer.addEventListener('mouseleave', (e)=>
+{
+    CPUOptionContainer.style.backgroundColor = '##A3CBFF';
+});
 CPUOptionContainer.addEventListener('click', ()=>{
     if(!definingCPUOption)
     {
@@ -26,7 +34,7 @@ CPUOptionContainer.addEventListener('click', ()=>{
         definingCPUOption = true;
         setValueToCPU();
     }
-})
+});
 leftButton.addEventListener('click', (e)=>
 {
     if(!definingCPUOption)
