@@ -20,11 +20,13 @@ setValueToPlayer();
 window.addEventListener('resize', setComponentsSize);
 CPUOptionContainer.addEventListener('mouseenter', (e)=>
 {
+    if(!definingCPUOption)
     CPUOptionContainer.style.backgroundColor = '#7590b3';
 });
 CPUOptionContainer.addEventListener('mouseleave', (e)=>
 {
-    CPUOptionContainer.style.backgroundColor = '##A3CBFF';
+    if(!definingCPUOption)
+    CPUOptionContainer.style.backgroundColor = '#A3CBFF';
 });
 CPUOptionContainer.addEventListener('click', ()=>{
     if(!definingCPUOption)
